@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Mar 14 13:57:21 2018
-
-@author: user1
-"""
-
-# Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
@@ -58,8 +50,8 @@ y_kmeans = kmeans.fit_predict(X)
 plt.figure(2)
 plt.clf()
 for i in range(0, nClusters):
-    plt.scatter(X[y_kmeans == i, 0], X[y_kmeans == i, 1], s = 10, label = 'Cluster %d' % i)
-plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s = 500, c = 'silver', alpha=0.5, label = 'Centroids')
+    plt.scatter(X[y_kmeans == i, 0], X[y_kmeans == i, 1], s = 10)
+plt.scatter(kmeans.cluster_centers_[:, 0], kmeans.cluster_centers_[:, 1], s = 500, c = 'silver', alpha=0.5)
 plt.title('K-means Clustering')
 plt.xlabel('X')
 plt.ylabel('Y')
